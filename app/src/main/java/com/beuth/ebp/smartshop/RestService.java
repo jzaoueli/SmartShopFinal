@@ -5,7 +5,7 @@ import retrofit.http.Header;
 import retrofit.http.POST;
 import retrofit.http.Path;
 
-public interface GithubService {
+public interface RestService {
 
     String ENDPOINT = "http://141.64.163.251:8080/SmartShopServer/rest";
 

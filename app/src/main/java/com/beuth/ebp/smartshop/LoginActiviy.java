@@ -83,8 +83,8 @@ public class LoginActiviy extends AppCompatActivity {
 
         @Override
         protected Response doInBackground(String... params) {
-            GithubService githubService = new RestAdapter.Builder()
-                    .setEndpoint(GithubService.ENDPOINT)
+            RestService restService = new RestAdapter.Builder()
+                    .setEndpoint(RestService.ENDPOINT)
                     .setErrorHandler(new ErrorHandler() {
                         @Override
                         public Throwable handleError(RetrofitError cause) {
@@ -95,9 +95,9 @@ public class LoginActiviy extends AppCompatActivity {
                             return cause;
                         }
                     })
-                    .build().create(GithubService.class);
+                    .build().create(RestService.class);
             try {
-                return githubService.sessionIDResponse();
+                return restService.sessionIDResponse();
             } catch (Exception e) {
                 return null;
             }
@@ -123,8 +123,8 @@ public class LoginActiviy extends AppCompatActivity {
 
         @Override
         protected Response doInBackground(String... params) {
-            GithubService githubService = new RestAdapter.Builder()
-                    .setEndpoint(GithubService.ENDPOINT)
+            RestService githubService = new RestAdapter.Builder()
+                    .setEndpoint(RestService.ENDPOINT)
                     .setErrorHandler(new ErrorHandler() {
                         @Override
                         public Throwable handleError(RetrofitError cause) {
@@ -132,7 +132,7 @@ public class LoginActiviy extends AppCompatActivity {
                             return cause;
                         }
                     })
-                    .build().create(GithubService.class);
+                    .build().create(RestService.class);
             try {
                 return githubService.getTokenResponse(sessionIDBody);
             } catch (Exception e) {

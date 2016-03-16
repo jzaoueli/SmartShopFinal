@@ -218,14 +218,14 @@ selectLastSelectedTab();
 
         @Override
         protected List<Item> doInBackground(String... params) {
-            GithubService githubService = new RestAdapter.Builder()
+            RestService restService = new RestAdapter.Builder()
                     .setRequestInterceptor(new RequestInterceptor() {
                         @Override
                         public void intercept(RequestFacade request) {
                             request.addHeader("token", token);
                         }
                     })
-                    .setEndpoint(GithubService.ENDPOINT)
+                    .setEndpoint(RestService.ENDPOINT)
                     .setErrorHandler(new ErrorHandler() {
                         @Override
                         public Throwable handleError(RetrofitError cause) {
@@ -236,9 +236,9 @@ selectLastSelectedTab();
                             return cause;
                         }
                     })
-                    .build().create(GithubService.class);
+                    .build().create(RestService.class);
             try {
-                return githubService.getItemsList(token).getItems();
+                return restService.getItemsList(token).getItems();
             } catch (Exception e) {
                 return null;
             }
@@ -286,8 +286,8 @@ selectLastSelectedTab();
 
         @Override
         protected List<Order> doInBackground(String... params) {
-            GithubService githubService = new RestAdapter.Builder()
-                    .setEndpoint(GithubService.ENDPOINT)
+            RestService githubService = new RestAdapter.Builder()
+                    .setEndpoint(RestService.ENDPOINT)
                     .setErrorHandler(new ErrorHandler() {
                         @Override
                         public Throwable handleError(RetrofitError cause) {
@@ -298,7 +298,7 @@ selectLastSelectedTab();
                             return cause;
                         }
                     })
-                    .build().create(GithubService.class);
+                    .build().create(RestService.class);
             try {
                 Orders repoList = githubService.listOrder();
                 return repoList.getOrders();
@@ -333,14 +333,14 @@ selectLastSelectedTab();
 
         @Override
         protected com.beuth.ebp.smartshop.Response doInBackground(String... params) {
-            GithubService githubService = new RestAdapter.Builder()
+            RestService githubService = new RestAdapter.Builder()
                     .setRequestInterceptor(new RequestInterceptor() {
                         @Override
                         public void intercept(RequestFacade request) {
                             request.addHeader("token", token);
                         }
                     })
-                    .setEndpoint(GithubService.ENDPOINT)
+                    .setEndpoint(RestService.ENDPOINT)
                     .setErrorHandler(new ErrorHandler() {
                         @Override
                         public Throwable handleError(RetrofitError cause) {
@@ -351,10 +351,9 @@ selectLastSelectedTab();
                             return cause;
                         }
                     })
-                    .build().create(GithubService.class);
+                    .build().create(RestService.class);
             try {
-                com.beuth.ebp.smartshop.Response response = githubService.getAddItemResponse(token, itemTitle, itemDescitpion, itemStartPrice);
-                return response;
+                return githubService.getAddItemResponse(token, itemTitle, itemDescitpion, itemStartPrice);
             } catch (Exception e) {
                 return null;
             }

@@ -185,8 +185,8 @@ public class OrderConfirmActivity extends AppCompatActivity {
 
         @Override
         protected Response doInBackground(String... params) {
-            GithubService githubService = new RestAdapter.Builder()
-                    .setEndpoint(GithubService.ENDPOINT)
+            RestService restService = new RestAdapter.Builder()
+                    .setEndpoint(RestService.ENDPOINT)
                     .setErrorHandler(new ErrorHandler() {
                         @Override
                         public Throwable handleError(RetrofitError cause) {
@@ -197,10 +197,10 @@ public class OrderConfirmActivity extends AppCompatActivity {
                             return cause;
                         }
                     })
-                    .build().create(GithubService.class);
+                    .build().create(RestService.class);
             try {
 
-                return githubService.ConfirmOrder(position);
+                return restService.ConfirmOrder(position);
             } catch (Exception e) {
                 return null;
             }
