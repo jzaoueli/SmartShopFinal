@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="150dp">
+    </View>
+
+    <Button
+        android:id="@+id/buttongotoeBay"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1.74"
+        android:text="Go To eBay"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/buttongotosmartshop"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1.74"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:text="go to smartshop"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+    </View>
+
+    <TextView
+        android:id="@+id/textgotoebay"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Your token is not valid, please go to ebay, sign in and come back to SmartShop App."
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textgotosmartshop"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="If you have accepted click on go to smartshop to use you shop."
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:visibility="gone" />
+</LinearLayout><!-- From: file:/C:/Users/EPD-User/StudioProjects/SmartShopFinal/app/src/main/res/layout/activity_login.xml -->
