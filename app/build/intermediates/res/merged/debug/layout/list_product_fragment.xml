@@ -9,4 +9,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
 
-</LinearLayout><!-- From: file:/C:/Users/EPD-User/StudioProjects/SmartShopFinal/app/src/main/res/layout/list_product_fragment.xml -->
+</LinearLayout>

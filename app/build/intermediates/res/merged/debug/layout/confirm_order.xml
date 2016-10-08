@@ -314,4 +314,4 @@
             android:background="@color/colorPrimaryDark"/>
     </LinearLayout>
 
-</ScrollView><!-- From: file:/C:/Users/EPD-User/StudioProjects/SmartShopFinal/app/src/main/res/layout/confirm_order.xml -->
+</ScrollView>

@@ -59,4 +59,4 @@
         android:textColor="#ffffff"
         android:textSize="20dp"
         android:visibility="gone" />
-</LinearLayout><!-- From: file:/C:/Users/EPD-User/StudioProjects/SmartShopFinal/app/src/main/res/layout/activity_login.xml -->
+</LinearLayout>

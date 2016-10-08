@@ -18,4 +18,4 @@
         android:layout_height="wrap_content"
         android:paddingTop="15dp"
         android:textSize="20sp" />
-</LinearLayout><!-- From: file:/C:/Users/EPD-User/StudioProjects/SmartShopFinal/app/src/main/res/layout/navrow.xml -->
+</LinearLayout>
