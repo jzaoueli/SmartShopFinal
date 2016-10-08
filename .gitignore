@@ -6,6 +6,7 @@
 .metadata/
 *.log
 local.properties
+app/buil/
 
 # Mac OS generated #
 ####################
